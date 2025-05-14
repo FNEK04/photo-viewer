@@ -59,7 +59,7 @@ onMounted(() => {
         v-model="search"
         @keydown.enter="handleSearch"
         class="flex-1 px-3 py-2 rounded bg-zinc-50 dark:bg-zinc-800 border border-zinc-300 dark:border-zinc-700 focus:outline-none focus:ring focus:ring-blue-400"
-        placeholder="Введите ID альбомов через пробел (например: 1 2 3)"
+        placeholder="Enter album IDs separated by spaces (for example: 1 2 3"
         type="text"
       />
       <button
@@ -90,7 +90,7 @@ onMounted(() => {
       :sortOrder="sortOrder"
       @sort="handleSort"
     />
-    <div v-if="store.error" class="text-red-600 mt-4">Ошибка загрузки: {{ store.error.message }}</div>
+    <div v-if="store.error" class="text-red-600 mt-4">Error: {{ store.error.message }}</div>
   </div>
 </template>
 
